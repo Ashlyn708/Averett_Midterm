@@ -2,8 +2,6 @@
 var express = require('express');
 //require body-parser
 var bodyParser = require("body-parser");
-//require mongoose
-var mongoose = require("mongoose");
 //require node-fetch
 var fetch = require('node-fetch');
 //create express object, call express
@@ -26,29 +24,21 @@ var completed = [];
 
 //get home page /
 app.get('/', function(req, res){
-    //query to mongoDB for todos
-    Todo.find(function(err, todo){
-        if(err){
-            console.log(err);
-        }else{
-            tasks = [];
-            completed = [];
-            for(i = 0; i< todo.length; i++){
-                if(todo[i].done){
-                    completed.push(todo[i])
-                }else{
-                    tasks.push(todo[i])
-                }
-            }
-        }
-    });
-    //return something to home page
-    res.render('index', {tasks: tasks, completed: completed}); //add completed variable to ejs ex {a:a, b:b}
+    console.log("got it");
+    res.render('index');
 });
 
-
-//fetch nasa information and send to front end as JSON data
 app.get('/nasa', function(req, res){
+    let nasaData;
+    fetch('https://api.nasa.gov/planetary/apod?api_key=7lqr4qoVCaJweZv9hp89XHb6he3UEqesrowGwAMa')
+    .then(res => res.json())
+    .then(data => {
+        res.render('nasa',{data:data})
+    });
+})
+//fetch nasa information and send to front end as JSON data\
+//change nasa to comic
+app.get('/nasaDate', function(req, res){
     let nasaData;
     fetch('https://api.nasa.gov/planetary/apod?api_key=7lqr4qoVCaJweZv9hp89XHb6he3UEqesrowGwAMa')
     .then(res => res.json())
