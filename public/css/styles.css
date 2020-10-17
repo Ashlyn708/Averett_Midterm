@@ -2,7 +2,7 @@ body {
     font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: medium;
     color:#333;
-    background: #7E685A;
+    background: #C2B9B0;
 }
 
 p {
@@ -14,17 +14,12 @@ p {
     width: 1000px;
 }
 
-#headerwrap {
-    width: 1000px;
-    float: left;
-    margin: 0 auto;
-}
 
 #header {
     height: 70px;
-    background: #C2B9B0;
+    background: #E7717D;
     border-radius: 10px;
-    border: 1px solid #aea59c;
+    border: 1px solid #E7717E;
     margin: 5px;
 }
 
@@ -49,23 +44,11 @@ p {
 }
 
 #content {
-    background: #E7717D;
+    background: rgb(122, 108, 94);
     border-radius: 10px;
-    border: 1px solid #d35d69;
+    border: 1px solid #C2b9bc;
     margin: 5px;
+    font-size: bold;
 }
 
-#footerwrap {
-    width: 1000px;
-    float: left;
-    margin: 0 auto;
-    clear: both;
-}
-
-#footer {
-    height: 40px;
-    background: #33FF66;
-    border-radius: 10px;
-    border: 1px solid #1feb52;
-    margin: 5px;
-}
+#pic{position:center;}
