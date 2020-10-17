@@ -7,27 +7,48 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="css/styles.css" rel="stylesheet">
 
-    <title>Hello, world!</title>
+    <title>Comic of the Day!</title>
   </head>
   <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-link" href="/random">Random</a>
+    <div id="wrapper">
+        <div id="headerwrap">
+            <div id="header">
+                <h1>Comic of the day</h1>
+            </div>
+        </div>
+        <div id="navigationwrap">
+            <div id="navigation">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="#">Navbar</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="/random">Random</a>
+                        </div>
+                    </div>
+                 </nav>
+            </div>
+        </div>
+        <div id="contentwrap">
+            <div id="content">
+                <h2><%=data.title%></h2>
+                <img src="<%= data.img %>" alt="Comic of the day" width="500" height="600">
+                <p>Date: <%= data.month %>-<%= data.day %>-<%= data.year %></p>
+                <p>Description: <%= data.alt %></p>
+            </div>
+        </div>
+        <div id="footerwrap">
+        <div id="footer">
+            <p></p>
+        </div>
+        </div>
     </div>
-  </div>
-</nav>
-    <h1>Comic of the day</h1>
-     <h2><%=data.title%></h2>
-    <img src="<%= data.img %>" alt="Comic of the day" width="500" height="600">
-    <p>Date: <%= data.month %>-<%= data.day %>-<%= data.year %></p>
-    <p>Description: <%= data.alt %></p>
+
 
     <!-- Optional JavaScript; choose one of the two! -->
 
