@@ -23,11 +23,12 @@
     </div>
   </div>
 </nav>
-    <h1>Comic of the day</h1>
-     <h2><%=data.title%></h2>
+    <h1>A Random Comic</h1>
+    <h2><%=data.title%></h2>
     <img src="<%= data.img %>" alt="Comic of the day" width="500" height="600">
     <p>Date: <%= data.month %>-<%= data.day %>-<%= data.year %></p>
     <p>Description: <%= data.alt %></p>
+    <button action="/newRand" type="button"> New Comic </button>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
