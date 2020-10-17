@@ -24,6 +24,8 @@ var completed = [];
 
 //get home page /
 app.get('/', function(req, res){
+    let comicData;
+    fetch('http://xkcd.com/info.0.json')
     console.log("got it");
     res.render('index');
 });
