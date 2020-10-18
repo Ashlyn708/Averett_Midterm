@@ -9,11 +9,22 @@ p {
     padding: 10px;
 }
 
+h2
+{
+  text-align: center;
+  background: black;
+}
+
 #wrapper {
     margin: 0 auto;
     width: 1000px;
 }
 
+#headerwrap {
+    width: 1000px;
+    float: left;
+    margin: 0 auto;
+}
 
 #header {
     height: 70px;
@@ -21,6 +32,8 @@ p {
     border-radius: 10px;
     border: 1px solid #E7717E;
     margin: 5px;
+    font-weight: bold;
+    text-align: center;
 }
 
 #navigationwrap {
@@ -48,7 +61,12 @@ p {
     border-radius: 10px;
     border: 1px solid #C2b9bc;
     margin: 5px;
-    font-size: bold;
+    font-weight: bold;
+    color:white;
 }
 
-#pic{position:center;}
+#pic{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

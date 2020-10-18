@@ -25,7 +25,7 @@ app.get('/', function(req, res){
     .then(res => res.json())
     .then(data => {
         res.render('index',{data:data})
-    console.log("got it");
+    //console.log("got it");
     })
     
 });
@@ -39,14 +39,14 @@ app.get('/random', function(req, res){
     });
 })
 
-app.post('/newRand', function(req, res){
-    let randNum=Math.floor((Math.random() * 2373) + 1);
-    fetch('https://xkcd.com/'+randNum+'/info.0.json')
-    .then(res => res.json())
-    .then(data => {
-        res.render('random',{data:data})
-    });
-})
+//app.post('/newRand', function(req, res){
+  //  let randNum=Math.floor((Math.random() * 2373) + 1);
+    //fetch('https://xkcd.com/'+randNum+'/info.0.json')
+    //.then(res => res.json())
+    //.then(data => {
+      //  res.render('random',{data:data})
+    //});
+//})
 
 //server setup
 app.listen(port, function(){
